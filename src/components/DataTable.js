@@ -1,6 +1,6 @@
 import React from "react";
 
-function DataTable() {
+function DataTable(props) {
     return (
         <div>
             <table class="table">
@@ -14,13 +14,16 @@ function DataTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Mark's image</td>
-                        <td>Mark Cubin</td>
-                        <td>728-392-1923</td>
-                        <td>MarkCubin@aol.com</td>
-                        <td>02-02-2020</td>
+                    {console.log(props.results)}
+                    {props.results.map(result => (
+                    <tr key={result.id}>
+                        <td><img alt="thumbnail" className="img-fluid" src={result.picture.thumbnail}/></td>
+                        <td>{result.name.first} {result.name.last}</td>
+                        <td>{result.phone}</td>
+                        <td>{result.email}</td>
+                        <td>{result}</td>
                     </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
