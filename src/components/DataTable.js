@@ -21,7 +21,7 @@ function DataTable(props) {
                         <td>{result.name.first} {result.name.last}</td>
                         <td>{result.phone}</td>
                         <td>{result.email}</td>
-                        <td>{result}</td>
+                        <td>{result.dob.date}</td>
                     </tr>
                     ))}
                 </tbody>
