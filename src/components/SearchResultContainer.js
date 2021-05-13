@@ -33,6 +33,22 @@ class SearchResultContainer extends Component {
         search: value,
         results: newResults
       });
+    };
+
+    handleOnClick = event => {
+      // Preventing the default behavior of the form submit (which is to refresh the page)
+      event.preventDefault();
+  
+      // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
+      alert(`this was clicked`);
+
+      const results = this.state.results;
+      const newOrder = results.sort((resulta, resultb) => resulta.name.first.localeCompare(resultb.name.first));
+      console.log(`new Order ${newOrder}`)
+
+      this.setState({
+        results: newOrder
+      });
 
     };
     
@@ -44,7 +60,7 @@ class SearchResultContainer extends Component {
             value={this.state.search}
             handleInputChange={this.handleInputChange}
           />
-          <DataTable results={this.state.results} />
+          <DataTable results={this.state.results} handleOnClick={this.handleOnClick} />
         </div>
       );
     }
