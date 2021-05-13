@@ -16,13 +16,13 @@ function DataTable(props) {
                 <tbody>
                     {console.log(props.results)}
                     {props.results.map(result => (
-                    <tr key={result.id}>
-                        <td><img alt="thumbnail" className="img-fluid" src={result.picture.thumbnail}/></td>
-                        <td>{result.name.first} {result.name.last}</td>
-                        <td>{result.phone}</td>
-                        <td>{result.email}</td>
-                        <td>{result.dob.date}</td>
-                    </tr>
+                        <tr key={result.index}>
+                            <td><img alt="thumbnail" className="img-fluid" src={result.picture.thumbnail} /></td>
+                            <td>{result.name.first} {result.name.last}</td>
+                            <td>{result.phone}</td>
+                            <td>{result.email}</td>
+                            <td>{result.dob.date}</td>
+                        </tr>
                     ))}
                 </tbody>
             </table>

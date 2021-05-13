@@ -5,10 +5,10 @@ function SearchBox(props) {
     <div>
     <form className="form">
       <input
-        value={props.search}
+        value={props.value}
         name="search"
         id="search"
-        // onChange={this.handleInputChange}
+        onChange={props.handleInputChange}
         type="text"
         placeholder="Search"
       />

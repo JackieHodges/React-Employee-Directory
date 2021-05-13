@@ -21,20 +21,28 @@ class SearchResultContainer extends Component {
     };
 
   
-    // handleInputChange = event => {
-    //   const name = event.target.name;
-    //   const value = event.target.value;
-    //   this.setState({
-    //     [name]: value
-    //   });
-    // };
+    handleInputChange = event => {
+      const value = event.target.value;
+      const results = this.state.results
+      console.log(`value ${value}`)
+
+      const newResults = results.filter((result) => result.name.first.startsWith(`${value}`));
+      console.log(`new Results ${newResults}`)
+
+      this.setState({
+        search: value,
+        results: newResults
+      });
+
+    };
     
     render() {
       return (
         <div>
           <SearchBox
-            search={this.state.search}
-            // handleInputChange={this.handleInputChange}
+            name="search"
+            value={this.state.search}
+            handleInputChange={this.handleInputChange}
           />
           <DataTable results={this.state.results} />
         </div>
