@@ -21,13 +21,13 @@ This was accomplished by using a container to hold the state changes with the ar
 
 To install from GitHub, follow these steps:
 
-* Pull the repository found here: [Budget Tracker Repo](https://github.com/JackieHodges/OnlineOfflineBudgetTrackers)
+* Pull the repository found here: [Budget Tracker Repo](https://github.com/JackieHodges/React-Employee-Directory)
 * Install dependencies by typing the following in the terminal: npm i
 * Run the application by entering: npm run start
 
 
 ## Usage
 
-Deployed webpage on Heroku can be found here: [Deployed Heroku Page](https://arcane-wildwood-00770.herokuapp.com/)
+Deployed webpage on GitHub Pages can be found here: [Deployed GitHub Page](https://jackiehodges.github.io/React-Employee-Directory/)
 
 
