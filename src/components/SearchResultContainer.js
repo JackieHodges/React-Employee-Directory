@@ -9,7 +9,6 @@ class SearchResultContainer extends Component {
       results: []
     };
   
-    // When this component mounts, search the Giphy API for pictures of kittens
     componentDidMount() {
       this.getUsers(25);
     }
@@ -39,8 +38,7 @@ class SearchResultContainer extends Component {
       // Preventing the default behavior of the form submit (which is to refresh the page)
       event.preventDefault();
   
-      // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-      alert(`this was clicked`);
+      alert(`the users will now be sorted`);
 
       const results = this.state.results;
       const newOrder = results.sort((resulta, resultb) => resulta.name.first.localeCompare(resultb.name.first));
